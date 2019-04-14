@@ -30,7 +30,7 @@ const category5Id = mongoose.Types.ObjectId();
 
 module.exports = {
   "meetups": [
-     {
+    {
       "_id": meetup1Id,
       "location": "Bratislava, SK",
       "processedLocation": "bratislavask",
@@ -62,7 +62,7 @@ module.exports = {
       "startDate": moment().add(7, 'days').toISOString(),
       "timeFrom": "08:00",
       "timeTo": "10:00",
-      "joinedPeopleCount": 1,
+      "joinedPeopleCount": 2,
       "status": "active",
       "category": category2Id,
       "joinedPeople": [user1Id, user3Id],
@@ -81,7 +81,7 @@ module.exports = {
       "startDate": moment().add(7, 'days').toISOString(),
       "timeFrom": "08:00",
       "timeTo": "10:00",
-      "joinedPeopleCount": 1,
+      "joinedPeopleCount": 2,
       "status": "active",
       "category": category5Id,
       "joinedPeople": [user1Id, user3Id],
@@ -100,7 +100,7 @@ module.exports = {
       "startDate": moment().add(7, 'days').toISOString(),
       "timeFrom": "08:00",
       "timeTo": "10:00",
-      "joinedPeopleCount": 1,
+      "joinedPeopleCount": 2,
       "status": "active",
       "category": category1Id,
       "joinedPeople": [user1Id, user3Id],
@@ -119,7 +119,7 @@ module.exports = {
       "startDate": moment().add(7, 'days').toISOString(),
       "timeFrom": "08:00",
       "timeTo": "10:00",
-      "joinedPeopleCount": 1,
+      "joinedPeopleCount": 2,
       "status": "active",
       "category": category2Id,
       "joinedPeople": [user1Id, user3Id],
@@ -138,7 +138,7 @@ module.exports = {
       "startDate": moment().add(7, 'days').toISOString(),
       "timeFrom": "08:00",
       "timeTo": "10:00",
-      "joinedPeopleCount": 1,
+      "joinedPeopleCount": 2,
       "status": "active",
       "category": category3Id,
       "joinedPeople": [user1Id, user3Id],
@@ -149,8 +149,8 @@ module.exports = {
     {
       "_id": user1Id,
       "avatar": "https://b.kisscc0.com/20180718/urw/kisscc0-ninja-computer-icons-samurai-youtube-avatar-ninja-5b4ed903c2dd20.4931332915318940197982.jpg",
-      "email": "filip@gmail.com",
-      "name": "Filip Jerga",
+      "email": "mehul@gmail.com",
+      "name": "Mehul Mandviya",
       "info": "Bla bla bla bla",
       "createdAt": moment().toISOString(),
       "updatedAt": moment().toISOString(),
@@ -259,7 +259,7 @@ module.exports = {
       "_id": category1Id,
       "name": "sport",
       "image": "https://images.unsplash.com/photo-1508355991726-ebd81e4802f7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1506&q=80"
-    },{
+    }, {
       "_id": category2Id,
       "name": "cinema",
       "image": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80",
