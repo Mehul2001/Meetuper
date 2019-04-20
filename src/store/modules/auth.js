@@ -9,7 +9,6 @@ function checkTokenValidity(token) {
 
         return decodedToken && (decodedToken.exp * 1000) > new Date().getTime()
     }
-
     return false
 }
 export default {
