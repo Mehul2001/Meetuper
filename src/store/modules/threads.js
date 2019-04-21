@@ -23,7 +23,6 @@ export default {
 
             return axiosInstance.post('/api/v1/threads', thread)
                 .then(res => {
-                    debugger
                     const createdThread = res.data
                     const index = state.items.length
 
@@ -31,7 +30,7 @@ export default {
                     return createdThread
                 })
         },
-        sendPost({ commit, state, dispatch }, { text, threadId }) {
+        sendPost({ dispatch }, { text, threadId }) {
             const post = { text, thread: threadId }
             return axiosInstance.post('/api/v1/posts', post)
                 .then(res => {
@@ -42,7 +41,6 @@ export default {
         },
         addPostToThread({ commit, state }, { post, threadId }) {
             const threadIndex = state.items.findIndex(thread => thread._id === threadId)
-
             if (threadIndex > -1) {
                 const posts = state.items[threadIndex].posts
                 posts.unshift(post)
