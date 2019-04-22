@@ -1,11 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-
 import meetups from './modules/meetups'
 import threads from './modules/threads'
 import categories from './modules/categories'
 import auth from './modules/auth'
+import stats from './modules/stats'
+import meta from './modules/meta'
 
 Vue.use(Vuex)
 
@@ -14,7 +15,9 @@ export default new Vuex.Store({
         meetups,
         categories,
         threads,
-        auth
+        auth,
+        stats,
+        meta
     },
     mutations: {
         setItems(state, { resource, items }) {

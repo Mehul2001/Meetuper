@@ -26,7 +26,8 @@ const meetupsRoutes = require('./routes/meetups'),
   usersRoutes = require('./routes/users'),
   threadsRoutes = require('./routes/threads'),
   postsRoutes = require('./routes/posts'),
-  categoriesRoutes = require('./routes/categories');
+  categoriesRoutes = require('./routes/categories'),
+  apiRoutes = require('./routes/api');
 
 mongoose.connect(config.DB_URI, { useNewUrlParser: true })
   .then(() => console.log('DB Connected!'))
@@ -49,6 +50,7 @@ app.use(bodyParser.json());
 //app.use(passport.initialize());
 //app.use(passport.session());
 
+app.use('/api/v1', apiRoutes)
 app.use('/api/v1/meetups', meetupsRoutes);
 app.use('/api/v1/users', usersRoutes);
 app.use('/api/v1/posts', postsRoutes);
