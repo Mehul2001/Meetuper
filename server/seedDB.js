@@ -6,7 +6,7 @@ const Thread = require('./models/threads');
 const Category = require('./models/categories')
 
 const data = require('./data.js');
-const config = require('./config/dev');
+const config = require('./config');
 
 class DB {
   constructor() {
@@ -19,32 +19,32 @@ class DB {
   }
 
   async cleanDb() {
-     for ( let model of this.models ) {
-      await model.deleteMany({}, () => {})
+    for (let model of this.models) {
+      await model.deleteMany({}, () => { })
       console.log(`Data for model ${model.collection.collectionName} Deleted!`)
     }
   }
 
   async pushDataToDb() {
     await this.categories.forEach(async (category) => {
-       const newCategory = new Category(category);
-       await newCategory.save(() => {});
+      const newCategory = new Category(category);
+      await newCategory.save(() => { });
     })
 
     await this.users.forEach(async user => {
-      await (new User(user)).save(() => {})
+      await (new User(user)).save(() => { })
     })
 
     await this.meetups.forEach(async meetup => {
-      await (new Meetup(meetup)).save(() => {})
+      await (new Meetup(meetup)).save(() => { })
     })
 
     await this.threads.forEach(async thread => {
-      await (new Thread(thread)).save(() => {})
+      await (new Thread(thread)).save(() => { })
     })
 
     await this.posts.forEach(async post => {
-      await (new Post(post)).save(() => {})
+      await (new Post(post)).save(() => { })
     })
 
     console.log('Database Populated!');
